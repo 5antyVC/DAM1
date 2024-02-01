@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <textarea id="miTextArea"> </textarea>
+        <br><br>
+
+        
+        <button onclick="mostrarSeleccion()">Mostrar testo</button>
+
+    </form>
+    <div id="resultado">
+        <script>
+            function mostrarSeleccion() {
+                let contenidoTextArea = document.getElementById("miTextArea").value;
+                alert(contenidoTextArea);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

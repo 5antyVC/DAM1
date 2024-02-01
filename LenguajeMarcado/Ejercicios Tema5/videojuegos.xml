@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="videojuegos.xsl" type="text/xsl"?>
+<videojuegos>
+    <videojuego>
+        <nombre>The Last of Us Part II</nombre>
+        <plataforma>PlayStation 4,
+            PlayStation 5</plataforma>
+        <precio>59.99</precio>
+        <fecha_de_lanzamiento>2020-06-19</fecha_de_lanzamiento>
+    </videojuego>
+    <videojuego>
+        <nombre>Assassin's Creed Valhalla</nombre>
+        <plataforma>PlayStation 4,
+            PlayStation 5, PC</plataforma>
+        <precio>59.99</precio>
+        <fecha_de_lanzamiento>2020-11-10</fecha_de_lanzamiento>
+
+    </videojuego>
+    <videojuego>
+        <nombre>Hades</nombre>
+        <plataforma>Nintendo Switch, PC,
+            Xbox One, Xbox Series, X/S, PlayStation 4,
+            PlayStation 5
+            </plataforma>
+        <precio>24.99</precio>
+        <fecha_de_lanzamiento>2020-09-17</fecha_de_lanzamiento>
+
+    </videojuego>
+
+</videojuegos>

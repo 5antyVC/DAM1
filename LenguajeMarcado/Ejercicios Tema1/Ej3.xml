@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Marcadores_Paginas_Web>
+	<Pagina>
+		<Nombre>Abrirllave</Nombre>
+		<Descripcion>Tutorial de informatica</Descripcion>
+		<URL>https://www.abrirllave.com/</URL>
+	</Pagina>
+	<Pagina>
+		<Nombre>Wikipedia</Nombre>
+		<Descripcion>La enciclopedia Libre</Descripcion>
+		<URL>https://www.wikipedia.org/</URL>
+	</Pagina>
+	<Pagina>
+		<Nombre>W3C</Nombre>
+		<Descripcion>World Wide Web Consortium</Descripcion>
+		<URL>https://www.w3.org/</URL>
+	</Pagina>
+</Marcadores_Paginas_Web>

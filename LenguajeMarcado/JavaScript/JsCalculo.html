@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+
+<body>
+    <form>
+        Producto: <input type="text" id="producto"><br>
+        Unidad: <input type="text" id="unidad"><br>
+        Precio: <input type="text" id="precio"><br>
+        <button type="button" onclick="calculo()">Calculo</button>
+    </form>
+    <p id="result"></p>
+    <p id="resultado"></p>
+    <script>
+        function calculo() {
+            let producto = document.getElementById("producto").value;
+            let unidad = document.getElementById("unidad").value;
+            let precio = document.getElementById("precio").value;
+
+            let iva, ivapor;
+            let total = unidad * precio;
+            if (total > 1000) {
+                iva = total * 0.10;
+                ivapor = 10;
+            }
+            else {
+                iva = total * 0.21;
+                ivapor = 21;
+
+            }
+            let apagar = total + iva;
+
+
+            document.getElementById("result").innerHTML = "Producto: " + producto + "<br>Unidad: " + unidad + "<br>Precio: " + precio + "<br>Total: " + total + "<br>iva ("+ivapor+"%): " + iva + "<br>a pagar: " + apagar;
+        }
+    </script>
+</body>
+
+</html>

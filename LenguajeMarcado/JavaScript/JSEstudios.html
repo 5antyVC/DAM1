@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <input type="radio" id="radio1" name="estudios"> Sin estudios <br>
+
+        <input type="radio" id="radio2" name="estudios"> Educación primaria <br>
+
+        <input type="radio" id="radio3" name="estudios"> Educación secundaria <br>
+
+        <input type="radio" id="radio4" name="estudios"> Bachillerato <br>
+
+        <input type="radio" id="radio5" name="estudios"> Educación universitaria <br>
+
+        <input type="radio" id="radio6" name="estudios"> Formación profesional <br>
+
+        <input type="button" value="Mostrar" onclick="mostrarSeleccion()">
+
+
+    </form>
+    <div id="resultado">
+        <script>
+
+            function mostrarSeleccion() {
+
+
+                let resultado = document.getElementById("resultado");
+
+                if (document.getElementById("radio1").checked) {
+                    resultado.innerHTML = "JAJAJAJAJ No tienes estudios (haber estudiao)";
+                }
+                if (document.getElementById("radio2").checked) {
+                    resultado.innerHTML = "JAJAJAJAJ Casi no tienes estudios (haber estudiao)";
+                }
+                if (document.getElementById("radio3").checked) {
+                    resultado.innerHTML = "JAJAJAJAJ tienes pocos estudios (haber estudiao)";
+                }
+                if (document.getElementById("radio4").checked) {
+                    resultado.innerHTML = "JAJAJAJAJ Has hecho el bachillerato para nada (haber estudiao)";
+                }
+                if (document.getElementById("radio5").checked) {
+                    resultado.innerHTML = "Lo siento... Siento que hayas pasado por eso...";
+                }
+                if (document.getElementById("radio6").checked) {
+                    resultado.innerHTML = "BOF?! Tienes estudios de FP profesional en GMQ Tech???? :O";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

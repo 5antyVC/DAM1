@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejemplo de JS</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <input type="checkbox" id="Entorno" value="Entorno"> Entorno <br>
+        <input type="checkbox" id="Datos" value="Datos"> Base de Datos <br>
+        <input type="checkbox" id="Sistema" value="Sistema"> Sistema <br>
+        <input type="checkbox" id="Java" value="Java"> Java <br>
+        <input type="checkbox" id="Marcas" value="Marcas"> Marcas <br>
+        <button type="button" onclick="asigna()"> Mostrar asignaturas</button>
+    </form>
+    <div id="resultado">
+        <script>
+
+            function asigna() {
+
+                let subject = [];
+                let total = 0;
+
+                if (document.getElementById("Entorno").checked) {
+                    subject.push(document.getElementById("Entorno").value);
+                    total++;
+                }
+                if (document.getElementById("Datos").checked) {
+                    subject.push(document.getElementById("Datos").value);
+                    total++;
+
+                }
+                if (document.getElementById("Sistema").checked) {
+                    subject.push(document.getElementById("Sistema").value);
+                    total++;
+
+                }
+                if (document.getElementById("Java").checked) {
+                    subject.push(document.getElementById("Java").value);
+                    total++;
+
+                }
+                if (document.getElementById("Marcas").checked) {
+                    subject.push(document.getElementById("Marcas").value);
+                    total++;
+
+
+                }
+                document.getElementById("resultado").innerHTML = "Asignatura elegidas " + subject.join(", ") + "<br>" + "Nº Asignaturas:" + total;
+
+            }
+
+
+        </script>
+</body>
+
+
+</html>

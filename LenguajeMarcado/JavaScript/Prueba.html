@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<script>
+		function calcular() {
+			let x = parseInt(document.getElementById("num1").value);
+			let y = parseInt(document.getElementById("num2").value);
+			let opcion = document.getElementById("operacion").value;
+			let resultado;
+
+			if (opcion == 'suma') {
+				resultado = x + y;
+				document.getElementById("resultado").innerHTML = 'La suma de ' + x + ' + ' + y + ' = ' + resultado;
+			}
+			else if (opcion == 'resta') {
+				resultado = x - y;
+				document.getElementById("resultado").innerHTML = 'La resta de ' + x + ' - ' + y + ' = ' + resultado;
+			}
+			else if (opcion == 'multi') {
+				resultado = x * y;
+				document.getElementById("resultado").innerHTML = 'La multiplicación de ' + x + ' x ' + y + ' = ' + resultado;
+			}
+			else if (opcion == 'division') {
+				resultado = x / y;
+				document.getElementById("resultado").innerHTML = 'La división de ' + x + ' / ' + y + ' = ' + resultado;
+			}
+			else {
+				document.getElementById("resultado").innerHTML = 'No ha seleccionado ninguna operación';
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculadora</h1>
+	<p>Introduzca dos números:</p>
+	<label for="num1">Primer número:</label>
+	<input type="text" id="num1"><br><br>
+	<label for="num2">Segundo número:</label>
+	<input type="text" id="num2"><br><br>
+
+	<p>Seleccione una operación:</p>
+	<select id="operacion">
+		<option value="suma">Suma</option>
+		<option value="resta">Resta</option>
+		<option value="multi">Multiplicación</option>
+		<option value="division">División</option>
+	</select><br><br>
+
+	<button onclick="calcular()">Calcular</button>
+
+	<p id="resultado"></p>
+
+</body>
+</html>

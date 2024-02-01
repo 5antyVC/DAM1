@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de Textarea y JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form id="formulario">
+        <label>Nombre:</label>
+        <input type="text" id="nombre"><br><br>
+
+        <label>Modalidad:</label>
+        <input type="radio" name="modalidad" value="Presencial">Presencial
+        <input type="radio" name="modalidad" value="Online">Online
+        <input type="radio" name="modalidad" value="Streaming">Streaming
+        <br><br>
+
+        <label>Asignaturas:</label>
+        <input type="checkbox" name="asignaturas" value="programación">programación
+        <input type="checkbox" name="asignaturas" value="Base de datos">Base de datos
+        <input type="checkbox" name="asignaturas" value="Lenguaje de marcas">Lenguaje de marcas<br><br>
+
+        <label>curso:</label>
+        <select id="curso">
+            <option value="">Seleccione un curso</option>
+            <option value="DAM">DAM</option>
+            <option value="DAW">DAW</option>
+            <option value="SMR">SMR</option>
+            <option value="ASIR">ASIR</option>
+            <option value="CIBERSEGURIDAD">CIBERSEGURIDAD</option>
+
+        </select><br><br>
+
+        <input type="button" value="Enviar" onclick="salida()">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function salida() {
+            let formulario = document.getElementById("formulario");
+            let nombre = document.getElementById("nombre");
+            let modalidad = document.getElementsByName("modalidad");
+            let asignaturas = document.getElementsByName("asignaturas");
+            let curso = document.getElementById("curso");
+            let resultado = document.getElementById("resultado");
+
+            let modalidadSeleccionado;
+            for (var i = 0; i < modalidad.length; i++) {
+                if (modalidad[i].checked) {
+                    modalidadSeleccionado = modalidad[i].value;
+                    break;
+                }
+            }
+
+            let asignaturasSeleccionadas = [];
+            for (var i = 0; i < asignaturas.length; i++) {
+                if (asignaturas[i].checked) {
+                    asignaturasSeleccionadas.push(asignaturas[i].value);
+                }
+            }
+
+            resultado.innerHTML = "Nombre: " + nombre.value + "<br>" +
+                "Modalidad: " + modalidadSeleccionado + "<br>" +
+                "Asignaturas: " + asignaturasSeleccionadas.join(", ") + "<br>" +
+                "curso: " + curso.options[curso.selectedIndex].text;
+        }
+    </script>
+
+</body>
+
+</html>

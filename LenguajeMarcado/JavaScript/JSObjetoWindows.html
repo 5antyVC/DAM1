@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Este progrma permite analizar la llamada
+        a disitintas resposabilidades
+    </p>
+    <form>
+        <br>
+        <input type="button" value="open()" onclick="abrir()">
+        <br>
+        <input type="button" value="open con parametros" onclick="abrirParametros()">
+        <br>
+        <input type="button" value="alert" onclick="mostrarAlerta()">
+        <br>
+        <input type="button" value="confirm" onclick="confirmar()">
+        <br>
+        <input type="button" value="prompt" onclick="cargarcadena()">
+        <br>
+        <input type="button" value="Imprimir esta pagina" onclick="print()">
+        <br>
+        <input type="button" value="NECESITO UN TRABAJO" onclick="open('https://campus.gmqtech.es','_blank', 'width=500,height=500')">
+
+
+    </form>
+
+
+
+    <script>
+        function abrir() {
+            let ventana = open();
+            ventana.document.write("Estoy escribiendo en la nueva ventana");
+            ventana.document.write("Segunda linea");
+        }
+        function abrirParametros() {
+            let ventana = open('', '', 'width=400,height=250,menubar=yes');
+            ventana.document.write("Esto es lo primero que aparece canijo<br>");
+
+        }
+
+        function mostrarAlerta() {
+            alert("Esta ventana de alerta ya la utilizamos antes en verdad");
+        }
+
+        function confirmar() {
+            let respuesta = confirm("Presione alguno de los dos botones");
+            if (respuesta == true) {
+                alert("presiono aceptar, LA MUERTE...");
+
+            }
+            else {
+                alert("presiono cancelar, LA EUTANASIA");
+
+            }
+        }
+
+        function cargarcadena() {
+            let cad = prompt("Indica tu nombre: ");
+            alerta("Tu nombre es " + cad);
+        }
+
+
+
+        function saludar() {
+            alert("Vete a accenture");
+        }
+        setTimeout(saludar, 2000);
+
+    </script>
+</body>
+
+</html>

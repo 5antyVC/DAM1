@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaracion de RSS -->
+<rss version="2.0">
+   <!-- Declaracion del canal -->
+   <channel>
+      <!-- Titulo del Canal -->
+      <title>Ejercicio RSS</title>
+      <!-- Descripcion del Canal -->
+      <description>Ejemplo de un RSS hecho con dedos</description>
+      <!-- Enlace al sitio del Feed RSS -->
+      <link>https://es.wikihow.com/crear-un-feed-RSS</link>
+      <!-- Elementos de feed, estos se muestran en los lectores de RSS  en el orden que esten aquí de arriba hacia abajo -->
+      <!-- Elemento individual del Fedd -->
+      <item>
+         <!-- Titulo del elemento del feed -->
+         <title>noticias de michael jackson plis</title>
+         <!-- Descripcion de la actualizacion del sitio que este elemento representa, puede contener cuanto texto e imagenes necesite-->
+         <description>Descripción detallada de los elementos de un Feed RSS</description>
+         <!-- Enlace a la seccion del sitio-->
+         <link>https://www.vanitatis.com</link>
+         <!-- Fecha de publicación -->
+      </item>
+   </channel>
+</rss>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular IVA en España</title>
+</head>
+
+<body>
+    <h1>Calcular IVA en España</h1>
+    <p>Introduce el precio sin IVA:</p>
+
+    <input type="text" id="precio">
+    <p>Selecciona el tipo de IVA:</p>
+    <select id="tipoIVA">
+        <option value="general">IVA general (21%)</option>
+        <option value="reducido">IVA reducido (10%)</option>
+        <option value="superreducido">IVA superreducido (4%)</option>
+    </select>
+    <button onclick="calcularPrecioConIVA()">Calcular precio con IVA</button>
+    <p>Precio Con 5% de Descuento : <span id="precioConDescuento"></span></p>
+
+    <p>Precio Con 15% IRPF : <span id="precioConIRPF"></span></p>
+
+    <p>Precio Con IVA : <span id="precioConIVA"></span></p>
+    <p>Precio Final : <span id="preciofinal"></span></p>
+
+    <script src="JSIVA.js"></script>
+    <script>
+        function calcularPrecioConIVA() {
+            let precio = Number(document.getElementById("precio").value);
+            let tipoIVA = (document.getElementById("tipoIVA").value);
+
+            let preciofinal;
+            let precioConIVA;
+            let precioConIRPF;
+            let precioConDescuento;
+            if (tipoIVA == "general") {
+                precioConIVA = calcularIVAgeneral(precio);
+            }
+            else if (tipoIVA == "reducido") {
+                precioConIVA = calcularIVAreducido(precio);
+            }
+            else if (tipoIVA == "superreducido") {
+                precioConIVA = calcularIVAsuperreducido(precio);
+
+            }
+            if (precio>=1000) {
+                precioConDescuento=cinco(precio);
+
+            }
+            else{
+                precioConDescuento=0;
+            }
+            precioConIRPF = calcularIRPF(precio);
+            preciofinal=((precio-precioConDescuento)+precioConIRPF)+precioConIVA-precio;
+            
+            document.getElementById("precioConDescuento").textContent = precioConDescuento.toFixed(2) + " €";
+
+            document.getElementById("precioConIVA").textContent = precioConIVA.toFixed(2) + " €";
+
+            document.getElementById("precioConIRPF").textContent = precioConIRPF.toFixed(2) + " €";
+
+            document.getElementById("preciofinal").textContent = preciofinal.toFixed(2) + " €";
+
+
+        }
+    </script>
+</body>
+
+</html>

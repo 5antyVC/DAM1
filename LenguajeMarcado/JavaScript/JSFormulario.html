@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de Textarea y JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form id="Formulario">
+        <label>Nombre:</label>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Genero:</label>
+        <input type="radio" name="genero" value="Masculino">Masculino
+        <input type="radio" name="genero" value="Femenino">Femenino<br><br>
+
+        <label>Aficiones:</label>
+        <input type="checkbox" name="aficiones" value="leer">Leer
+        <input type="checkbox" name="aficiones" value="ver peliculas">Ver peliculas
+        <input type="checkbox" name="aficiones" value="jugar juegos">Jugar juegos<br><br>
+
+        <label>Pais:</label>
+        <select id="pais">
+            <option value="Seleccione un pais"></option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+    <div id="resultado"></div>
+    <script>
+        document.getElementById("Formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var nombre = document.getElementsByName("nombre")[0].value;
+            var genero = document.querySelector('input[name="genero"]:checked').value;
+            var aficiones = [];
+            var checkboxes = document.getElementsByName("aficiones");
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    aficiones.push(checkboxes[i].value);
+                }
+            }
+            var pais = document.getElementById("pais").value;
+
+            document.getElementById("resultado").innerHTML =
+                "Nombre: " + nombre + "<br>" +
+                "Genero: " + genero + "<br>" +
+                "Aficiones: " + aficiones.join(", ") + "<br>" +
+                "Pais: " + pais;
+        });
+    </script>
+
+</body>
+
+</html>

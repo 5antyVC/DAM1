@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="starwars.xsl" type="text/xsl"?>
+<peliculas>
+    <pelicula>
+        <nombre>Star Wars: Episode IV - A New Hope</nombre>
+        <director>George Lucas</director>
+        <anio>1977</anio>
+        <pais>USA</pais>
+    </pelicula>
+    <pelicula>
+        <nombre>Star Wars: Episode V - The Empire Strikes Back</nombre>
+        <director>Irvin Kershner</director>
+        <anio>1980</anio>
+        <pais>USA</pais>
+
+    </pelicula>
+    <pelicula>
+        <nombre>Star Wars: Episode VI - Return of the Jedi</nombre>
+        <director>Ridchard Marquand</director>
+        <anio>1983</anio>
+        <pais>USA</pais>
+
+    </pelicula>
+    <pelicula>
+        <nombre>Star Wars: Episode VII - The Force Awakens</nombre>
+        <director>J. J. Abrams</director>
+        <anio>2015</anio>
+        <pais>USA</pais>
+
+    </pelicula>
+    <pelicula>
+        <nombre>Star Wars: Episode VIII - The Last Jedi</nombre>
+        <director>Rian Johnson</director>
+        <anio>2017</anio>
+        <pais>USA</pais>
+
+    </pelicula>
+
+</peliculas>

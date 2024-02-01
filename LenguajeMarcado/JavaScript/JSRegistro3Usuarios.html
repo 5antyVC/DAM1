@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validación de inicio de sesión</title>
+</head>
+<body>
+
+<h1>Validación de inicio de sesión</h1>
+
+<form id="formulario">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario"><br><br>
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña"><br><br>
+
+    <input type="button" value="Iniciar sesión" onclick="validarInicioSesion()">
+</form>
+
+<p id="mensaje"></p>
+
+<script>
+    var usuarios = [
+        ['juan', '111'],
+        ['alberto', '222'],
+        ['pablo', '333']
+    ];
+
+    var intentos = 3;
+
+    function validarInicioSesion() {
+        var usuario = document.getElementById('usuario').value;
+        var contraseña = document.getElementById('contraseña').value;
+
+        for (var i = 0; i < usuarios.length; i++) {
+            if (usuario === usuarios[i][0] && contraseña === usuarios[i][1]) {
+                document.getElementById('mensaje').innerHTML = 'Bienvenido Lord, ' + usuario + '!';
+                return;
+            }
+        }
+
+        intentos--;
+        if (intentos > 0) {
+            document.getElementById('mensaje').innerHTML = 'Usuario o contraseña incorrectos. Te quedan ' + intentos + ' intentos.';
+        } else {
+            document.getElementById('mensaje').innerHTML = 'Ha alcanzado el número máximo de intentos. ¡Adiós maldito Jedai!';
+            document.getElementById('formulario').style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

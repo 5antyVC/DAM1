@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Entrada App</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+
+    <form id="entradaApp">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        const form = document.getElementById("entradaApp");//definimos una constante para el nombre
+        //del formulario
+        form.addEventListener("submit", validateForm); //indicamos al navegador que este atento a //validateForm
+
+
+        function validateForm(e) {
+            //
+            e.preventDefault(); //esto permite que no se envie el formulario hasta que no se
+            //haya completado correctamente
+            const username = document.getElementById("username").value; //definimos los valores //como constantes que se hayan introducido anteriormente
+            const password = document.getElementById("password").value;//definimos los valores como //constantes que se hayan introducido anteriormente .value sirve para obtener los //valores en este caso de password y previamente de username
+
+            if (username.length < 10) {
+                alert("El nombre de usuario debe tener al menos 10 caracteres");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("La contraseña debe tener al menos 8 caracteres");
+                return;
+            }
+
+            if (username === password) {
+                alert("El nombre de usuario y la contraseña no deben ser iguales");
+                return;
+            }
+
+            // Enviar formulario
+            form.submit();
+        }
+
+
+    </script>
+</body>
+
+</html>

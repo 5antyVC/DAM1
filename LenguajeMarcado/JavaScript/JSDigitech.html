@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DIGITECH</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form id="Formulario">
+        <label>Nombre:</label>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Modalidad:</label>
+        <input type="radio" name="modalidad" value="Presencial">Presencial
+        <input type="radio" name="modalidad" value="Online">Online<br><br>
+
+        <label>Asignaturas:</label>
+        <input type="checkbox" name="asigaturas" value="FOL">FOL
+        <input type="checkbox" name="asigaturas" value="Lenguaje de Marcas">Lenguaje de Marcas
+        <input type="checkbox" name="asigaturas" value="Entorno">Entorno
+        <input type="checkbox" name="asigaturas" value="Sistemas">Sistemas
+        <input type="checkbox" name="asigaturas" value=" Programacion">Programacion
+        <input type="checkbox" name="asigaturas" value="Base de Datos">Base de Datos
+
+        <input type="checkbox" name="asigaturas" value="jugar juegos">Jugar juegos<br><br>
+
+        <label>Curso:</label>
+        <select id="Curso">
+            <option value="Seleccione un Curso"></option>
+            <option value="DAM">DAM</option>
+            <option value="DAW">DAW</option>
+            <option value="ASIR">ASIR</option>
+
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+    <div id="resultado"></div>
+    <script>
+        document.getElementById("Formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var nombre = document.getElementsByName("nombre")[0].value;
+            var modalidad = document.querySelector('input[name="modalidad"]:checked').value;
+            var asigaturas = [];
+            var checkboxes = document.getElementsByName("asigaturas");
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    asigaturas.push(checkboxes[i].value);
+                }
+            }
+            var Curso = document.getElementById("Curso").value;
+
+            document.getElementById("resultado").innerHTML =
+                "Nombre: " + nombre + "<br>" +
+                "Modalidad: " + modalidad + "<br>" +
+                "Asignaturas: " + asigaturas.join(", ") + "<br>" +
+                "Curso: " + Curso;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="pill.xsl" type="text/xsl"?>
+<Pills>
+    <Pildora>
+        <Color>Blue</Color>
+        <Caracteristicas>Personalidad,  Amabilidad, Atento, Altruismo</Caracteristicas>
+        <Representantes>Juan</Representantes>
+    </Pildora>
+    <Pildora>
+        <Color>Red
+        </Color>
+        <Caracteristicas>No/Si Hipergamia, Apariencia, Juego, Estatus, Flexibilidad Genetica</Caracteristicas>
+        <Representantes>Leonardo DiCaprio</Representantes>
+    </Pildora>
+    <Pildora>
+        <Color>Black
+        </Color>
+        <Caracteristicas>Hipergamia, Apariencia, inflexibilidad Genetica</Caracteristicas>
+        <Representantes>Mike Thurson</Representantes>
+    </Pildora>
+    
+
+</Pills>

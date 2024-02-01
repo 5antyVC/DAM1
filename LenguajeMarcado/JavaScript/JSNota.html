@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <label for="asigna">Asignatura:</label>
+        <input type="text" id="asigna" name="asigna">
+        <br>
+        <label for="nota">Nota:</label>
+        <input type="number" id="nota" name="nota">
+        <br><br>
+        <button type="button" onclick="showResult()">Enviar</button>
+    </form>
+
+
+    <div id="resultado"></div>
+
+
+    <script>
+        function showResult() {
+            let asigna = document.getElementById("asigna").value;
+            let nota = document.getElementById("nota").value;
+            let resultado = document.getElementById("resultado");
+            if (nota >= 5) {
+                resultado.innerHTML = asigna + ": Aprobado";
+            } else {
+                resultado.innerHTML = asigna + ": Suspenso";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

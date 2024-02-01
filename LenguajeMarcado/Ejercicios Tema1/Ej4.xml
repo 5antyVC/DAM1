@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Furbo>
+	<equipo>
+		<Nombre> erBeti</Nombre>
+		<ciudad>Sevilla</ciudad>
+		<Entrenador>Peregrini</Entrenador>
+		<Jugador>
+			<Nombre Posicion="Centro">Joaquin</Nombre>
+			<Nacionalidad>Española</Nacionalidad>
+		</Jugador>
+		<Jugador>
+			<Nombre Posicion="Centro">Carvalho</Nombre>
+			<Nacionalidad>Angoleña</Nacionalidad>
+		</Jugador>
+
+
+	</equipo>
+
+	<equipo>
+		<Nombre> osasunanuncaserinde</Nombre>
+		<ciudad>Pamplona</ciudad>
+		<Entrenador>Arrasate</Entrenador>
+		<Jugador>
+			<Nombre Posicion="Delantero">Ez Abde</Nombre>
+			<Nacionalidad>Marroqui</Nacionalidad>
+		</Jugador>
+		<Jugador>
+			<Nombre Posicion="Centro">Oroz</Nombre>
+			<Nacionalidad>Español</Nacionalidad>
+		</Jugador>
+	</equipo>
+
+</Furbo>

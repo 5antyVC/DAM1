@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<FichaTecnica>
+    <Movil>
+        <nombre>Xiaomi Mi 9</nombre>
+        <fabricante marca="xiaomi"></fabricante>
+        <color>Blanco Perlado, Azul Diamante, Negro Espacial</color>
+        <otros_datos>
+            <ram>8GB, 6GB, 12GB</ram>
+            <rom>64GB, 124GB, 256GB, 512GB</rom>
+        </otros_datos>
+    </Movil>
+    <Movil >
+        <nombre>Samsung Z Flip</nombre>
+        <fabricante marca="Samsung"></fabricante>
+        <color>Purpura Pastel, Blanco Mate, Gris Anochecer</color>
+        <otros_datos>
+            <ram>6GB, 8GB</ram>
+            <rom>124GB, 256GB, 512GB</rom>
+        </otros_datos>
+    </Movil>
+    <Movil >
+        <nombre>Iphone 13 MAX</nombre>
+        <fabricante marca="Iphone"></fabricante>
+        <color>Verde Bambu, Purpura Pastel, Rojo Ruby, Amarillo Limon</color>
+        <otros_datos>
+            <ram>6GB, 8GB</ram>
+            <rom>124GB, 256GB, 512GB</rom>
+        </otros_datos>
+    </Movil>
+</FichaTecnica>

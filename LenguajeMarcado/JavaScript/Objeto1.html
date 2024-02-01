@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo JS</title>
+</head>
+<body>
+    <script>
+        function Cliente(nombre, saldo, cuenta)
+        {
+            this.nombre=nombre;
+            this.saldo=saldo;
+            this.depositar=depositar;
+            this.extraer=extraer;
+            this.cuenta=cuenta;
+            this.cincopercent=cincopercent;
+            this.resumen=resumen;
+        }
+
+        function depositar(dinero)
+        {
+            this.saldo=this.saldo+dinero;
+        }
+        function extraer(dinero)
+        {
+            this.saldo=this.saldo-dinero;
+        }
+        function cincopercent(porcentaje)
+        {
+            this.saldo=this.saldo-(this.saldo*porcentaje);
+        }
+
+        function resumen(ncliente ,minimo) {
+            if (ncliente.saldo < minimo) {
+                document.write('Su cuenta ha sido baneada por no cumplir el mínimo de '+minimo);
+            } else {
+                document.write('Gracias por su compra.');
+            }
+            
+        }
+
+        let cliente1;
+        cliente1= new Cliente('diego', 1200,'ES500237885451354');
+        document.write('Nombre del cliente: '+cliente1.nombre+'<br>');
+        document.write('Nª cuenta del cliente: '+cliente1.cuenta+'<br>');
+        document.write('Saldo actual: '+cliente1.saldo+'<br>');
+        cliente1.depositar(120);
+        document.write('Saldo luego de depositar 120--->'+cliente1.saldo+'<br>');
+        cliente1.extraer(1000);
+        document.write('Saldo luego de extraer 1000--->'+cliente1.saldo+'<br>');
+        cliente1.cincopercent(0.05);
+        document.write('Saldo luego de comision del 5%: '+cliente1.saldo+'<br>');
+        cliente1.resumen(cliente1, 666);
+    </script>
+</body>
+</html>
